@@ -41,7 +41,7 @@ function SpinButton() {
 
       <section className="AdultSection">
         <h2>성인</h2>
-        <button type="button" className="Tooltip IconOnly" aria-describedby="tooltip-adult">
+        <button type="button" className="Tooltip IconOnly" aria-labelledby="tooltip-adult">
           성인 기준 상세 안내
         </button>
         <p id="tooltip-adult" role="tooltip" hidden>
@@ -61,7 +61,8 @@ function SpinButton() {
             type="number"
             className="AdultCountInput"
             aria-label={`성인 ${adultCount}명`}
-            maxLength="1"
+            min={ADULT_COUNT_MIN}
+            max={ADULT_COUNT_MAX}
             value={adultCount}
             onChange={() => {}}
           />
